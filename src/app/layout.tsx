@@ -38,7 +38,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${schibstedGrotesk.variable} antialiased`}>
+      <body className={`${schibstedGrotesk.variable} ${schibstedGrotesk.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
