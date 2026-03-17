@@ -14,10 +14,7 @@ export const metadata: Metadata = {
   description:
     "Creative Director & Product Designer for companies that want to move fast.",
   icons: {
-    icon: [
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
-    ],
+    icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {

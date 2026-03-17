@@ -4,7 +4,7 @@ import { AnimatedSection, AnimatedDiv } from "@/components/AnimatedSection";
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-8 text-xs font-semibold tracking-tight text-foreground">
+    <h2 className="text-section-label mb-8 text-foreground">
       {children}
     </h2>
   );
@@ -46,21 +46,21 @@ function ExperienceEntry({
         className="grid gap-6 py-10 md:grid-cols-[1fr_1.5fr]"
       >
         <div>
-          <h3 className="text-[15px] font-semibold leading-[1.3] tracking-tight text-foreground">
+          <h3 className="text-body-heading text-foreground">
             {title}
           </h3>
-          <p className="mt-2 text-[15px] leading-[1.35] text-muted">{company}</p>
-          <p className="text-[15px] leading-[1.35] text-muted">{dates}</p>
-          <p className="text-[15px] leading-[1.35] text-muted">{location}</p>
+          <p className="text-body mt-2 text-muted">{company}</p>
+          <p className="text-body text-muted">{dates}</p>
+          <p className="text-body text-muted">{location}</p>
         </div>
         <div className="flex flex-col gap-4">
           <div>
-            <h4 className="mb-2 text-[15px] font-semibold leading-[1.3] text-foreground">
+            <h4 className="text-body-heading mb-2 text-foreground">
               Highlights
             </h4>
             <ul className="flex flex-col gap-2">
               {bullets.map((bullet, i) => (
-                <li key={i} className="text-[15px] leading-[1.35] text-muted">
+                <li key={i} className="text-body text-muted">
                   • {bullet}
                 </li>
               ))}
@@ -68,12 +68,12 @@ function ExperienceEntry({
           </div>
           {subsections?.map((sub, i) => (
             <div key={i} className="mt-2">
-              <h4 className="mb-2 text-[15px] font-semibold leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground">
                 {sub.heading}
               </h4>
               <ul className="flex flex-col gap-2">
                 {sub.bullets.map((bullet, j) => (
-                  <li key={j} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={j} className="text-body text-muted">
                     • {bullet}
                   </li>
                 ))}
@@ -101,13 +101,13 @@ function RecommendationEntry({
     <AnimatedDiv delay={delay}>
       <SubDivider />
       <div className="py-8">
-        <p className="text-[15px] leading-[1.5] text-muted">
+        <p className="text-body text-muted" style={{ lineHeight: 1.5 }}>
           &ldquo;{quote}&rdquo;
         </p>
-        <p className="mt-4 text-[15px] leading-[1.35] text-foreground">
+        <p className="text-body mt-4 text-foreground">
           {name}
         </p>
-        <p className="text-[15px] leading-[1.35] text-muted">{title}</p>
+        <p className="text-body text-muted">{title}</p>
       </div>
     </AnimatedDiv>
   );
@@ -246,7 +246,7 @@ export default function Home() {
 
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             <AnimatedDiv delay={0.05}>
-              <h4 className="mb-2 text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground" style={{ fontWeight: "var(--font-weight-body)" }}>
                 Design Leadership
               </h4>
               <ul className="flex flex-col gap-2">
@@ -258,7 +258,7 @@ export default function Home() {
                   "Cross-functional leadership",
                   "Mentorship and coaching",
                 ].map((s) => (
-                  <li key={s} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={s} className="text-body text-muted">
                     • {s}
                   </li>
                 ))}
@@ -266,7 +266,7 @@ export default function Home() {
             </AnimatedDiv>
 
             <AnimatedDiv delay={0.1}>
-              <h4 className="mb-2 text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground" style={{ fontWeight: "var(--font-weight-body)" }}>
                 Product & UX
               </h4>
               <ul className="flex flex-col gap-2">
@@ -278,7 +278,7 @@ export default function Home() {
                   "Service design",
                   "Customer journey design",
                 ].map((s) => (
-                  <li key={s} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={s} className="text-body text-muted">
                     • {s}
                   </li>
                 ))}
@@ -286,7 +286,7 @@ export default function Home() {
             </AnimatedDiv>
 
             <AnimatedDiv delay={0.15}>
-              <h4 className="mb-2 text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground" style={{ fontWeight: "var(--font-weight-body)" }}>
                 Design Systems
               </h4>
               <ul className="flex flex-col gap-2">
@@ -298,7 +298,7 @@ export default function Home() {
                   "Design tokens",
                   "Scalable interface systems",
                 ].map((s) => (
-                  <li key={s} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={s} className="text-body text-muted">
                     • {s}
                   </li>
                 ))}
@@ -306,7 +306,7 @@ export default function Home() {
             </AnimatedDiv>
 
             <AnimatedDiv delay={0.2}>
-              <h4 className="mb-2 text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground" style={{ fontWeight: "var(--font-weight-body)" }}>
                 Product Strategy
               </h4>
               <ul className="flex flex-col gap-2">
@@ -317,7 +317,7 @@ export default function Home() {
                   "Data-informed design",
                   "Customer research and insights",
                 ].map((s) => (
-                  <li key={s} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={s} className="text-body text-muted">
                     • {s}
                   </li>
                 ))}
@@ -325,7 +325,7 @@ export default function Home() {
             </AnimatedDiv>
 
             <AnimatedDiv delay={0.25}>
-              <h4 className="mb-2 text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body-heading mb-2 text-foreground" style={{ fontWeight: "var(--font-weight-body)" }}>
                 Tools
               </h4>
               <ul className="flex flex-col gap-2">
@@ -336,7 +336,7 @@ export default function Home() {
                   "Design systems tooling",
                   "Prototyping tools",
                 ].map((s) => (
-                  <li key={s} className="text-[15px] leading-[1.35] text-muted">
+                  <li key={s} className="text-body text-muted">
                     • {s}
                   </li>
                 ))}
@@ -353,12 +353,12 @@ export default function Home() {
           <SectionHeading>Education</SectionHeading>
           <div className="grid gap-4 md:grid-cols-[1fr_1.5fr]">
             <div>
-              <h3 className="text-[15px] font-normal leading-[1.35] tracking-tight text-foreground">
+              <h3 className="text-body text-foreground">
                 Loughborough University
               </h3>
             </div>
             <div>
-              <h4 className="text-[15px] font-normal leading-[1.3] text-foreground">
+              <h4 className="text-body text-foreground">
                 Bachelor of Fine Arts in Graphic Design
               </h4>
             </div>
@@ -366,10 +366,10 @@ export default function Home() {
           <AnimatedDiv delay={0.1} className="mt-6">
             <SubDivider />
             <div className="pt-6">
-              <h3 className="mb-2 text-xs font-semibold tracking-tight text-foreground">
+              <h3 className="text-section-label mb-2 text-foreground">
                 Certifications
               </h3>
-              <p className="text-[15px] leading-[1.35] text-muted">
+              <p className="text-body text-muted">
                 Certified Professional in User Experience (CPUX), 2022
               </p>
             </div>

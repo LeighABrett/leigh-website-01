@@ -64,7 +64,7 @@ function RotatingVerb() {
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute bottom-0 left-0 whitespace-nowrap text-[#ee3800]"
+            className="absolute bottom-0 left-0 whitespace-nowrap text-accent"
           >
             {VERBS[index]}
           </motion.span>
@@ -76,15 +76,11 @@ function RotatingVerb() {
 
 function LandingThemeToggle() {
   const { theme, toggleTheme } = useTheme();
-  const isDark = theme === "dark";
 
   return (
     <button
       onClick={toggleTheme}
-      className="flex h-10 w-10 items-center justify-center rounded-full transition-all hover:brightness-110 active:scale-95 md:h-12 md:w-12 lg:h-[58px] lg:w-[58px]"
-      style={{
-        backgroundColor: isDark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.1)",
-      }}
+      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-elevated transition-all hover:brightness-110 active:scale-95 md:h-12 md:w-12 lg:h-[58px] lg:w-[58px]"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       <motion.div
@@ -134,19 +130,11 @@ function LandingThemeToggle() {
 
 export default function LandingPage() {
   const { theme } = useTheme();
-  const isDark = theme === "dark";
-
-  const bg = isDark ? "#0a0a0a" : "#ffffff";
-  const fg = isDark ? "#ffffff" : "#0a0a0a";
-  const logoSrc = isDark ? "/leigh-logo.svg" : "/leigh-logo-dark.svg";
+  const logoSrc = theme === "dark" ? "/leigh-logo.svg" : "/leigh-logo-dark.svg";
 
   return (
     <div
-      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-6 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
-      style={{
-        backgroundColor: bg,
-        color: fg,
-      }}
+      className={`${inter.className} page-padding relative flex min-h-dvh flex-col bg-background-surface text-foreground antialiased transition-colors duration-500`}
     >
       {/* Nav */}
       <motion.nav
@@ -169,8 +157,7 @@ export default function LandingPage() {
             href="https://www.linkedin.com/in/leighbrett"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 min-w-[100px] items-center justify-center rounded-[60px] bg-[#ee3800] text-[14px] font-medium tracking-tight text-white transition-all hover:brightness-110 active:scale-95 md:h-12 md:min-w-[140px] md:text-[18px] lg:h-[58px] lg:min-w-[182px] lg:text-[24px]"
-            style={{ letterSpacing: "-0.04em" }}
+            className="text-nav flex h-10 min-w-[100px] items-center justify-center rounded-[60px] bg-accent text-white transition-all hover:brightness-110 active:scale-95 md:h-12 md:min-w-[140px] lg:h-[58px] lg:min-w-[182px]"
           >
             LinkedIn
           </a>
@@ -185,23 +172,17 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[11vw] font-medium leading-[1.05] tracking-[-0.06em] md:text-[6.5vw] lg:text-[6.94vw]"
-            style={{ maxFontSize: "100px" } as React.CSSProperties}
+            className="text-hero"
           >
-            <span className="md:hidden">
-              Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
-            </span>
-            <span className="hidden md:inline" style={{ fontSize: "min(6.94vw, 100px)" }}>
-              Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
-            </span>
+            Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
           </motion.h1>
 
-          {/* Subtitle with rotating verb — fixed height so line wrapping doesn't shift heading */}
+          {/* Subtitle with rotating verb */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="relative mt-5 h-[3em] text-[5vw] font-normal leading-[1.25] tracking-[-0.025em] md:mt-8 md:h-[2em] md:text-[2.5vw] lg:mt-16 lg:text-[2.71vw]"
+            className="text-hero-sub relative mt-5 md:mt-8 lg:mt-16"
           >
             I&rsquo;m busy{" "}
             <RotatingVerb />{" "}
