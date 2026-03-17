@@ -81,10 +81,8 @@ function LandingThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="flex items-center justify-center rounded-full transition-all hover:brightness-110 active:scale-95"
+      className="flex h-10 w-10 items-center justify-center rounded-full transition-all hover:brightness-110 active:scale-95 md:h-12 md:w-12 lg:h-[58px] lg:w-[58px]"
       style={{
-        height: "clamp(36px, 4.03vw, 58px)",
-        width: "clamp(36px, 4.03vw, 58px)",
         backgroundColor: isDark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.1)",
       }}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
@@ -144,11 +142,10 @@ export default function LandingPage() {
 
   return (
     <div
-      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500`}
+      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-6 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
       style={{
         backgroundColor: bg,
         color: fg,
-        padding: "clamp(24px, 5.9vw, 85px) clamp(24px, 8.33vw, 120px)",
       }}
     >
       {/* Nav */}
@@ -163,23 +160,17 @@ export default function LandingPage() {
           alt="Leigh"
           width={152}
           height={63}
-          className="w-auto"
-          style={{ height: "clamp(48px, 5.5vw, 80px)" }}
+          className="h-10 w-auto md:h-14 lg:h-[80px]"
           priority
         />
 
-        <div className="flex items-center" style={{ gap: "clamp(8px, 1vw, 14px)" }}>
+        <div className="flex items-center gap-2 md:gap-3">
           <a
             href="https://www.linkedin.com/in/leighbrett"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center rounded-[60px] bg-[#ee3800] font-medium text-white transition-all hover:brightness-110 active:scale-95"
-            style={{
-              height: "clamp(36px, 4.03vw, 58px)",
-              minWidth: "clamp(100px, 12.64vw, 182px)",
-              fontSize: "clamp(13px, 1.67vw, 24px)",
-              letterSpacing: "-0.04em",
-            }}
+            className="flex h-10 min-w-[100px] items-center justify-center rounded-[60px] bg-[#ee3800] text-[14px] font-medium tracking-tight text-white transition-all hover:brightness-110 active:scale-95 md:h-12 md:min-w-[140px] md:text-[18px] lg:h-[58px] lg:min-w-[182px] lg:text-[24px]"
+            style={{ letterSpacing: "-0.04em" }}
           >
             LinkedIn
           </a>
@@ -189,20 +180,20 @@ export default function LandingPage() {
 
       {/* Hero — heading + subtitle grouped together */}
       <div className="flex flex-1 flex-col justify-center">
-        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(32px, 4.4vw, 63px)" }}>
+        <div className="flex flex-col gap-5 md:gap-8 lg:gap-16">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-medium"
-            style={{
-              fontSize: "clamp(28px, 6.94vw, 100px)",
-              lineHeight: "1.05",
-              letterSpacing: "-0.06em",
-            }}
+            className="text-[11vw] font-medium leading-[1.05] tracking-[-0.06em] md:text-[6.5vw] lg:text-[6.94vw]"
+            style={{ maxFontSize: "100px" } as React.CSSProperties}
           >
-            Hi, I&rsquo;m Leigh. I design products, build teams, and define
-            strategy for companies that want to move fast.
+            <span className="md:hidden">
+              Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
+            </span>
+            <span className="hidden md:inline" style={{ fontSize: "min(6.94vw, 100px)" }}>
+              Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
+            </span>
           </motion.h1>
 
           {/* Subtitle with rotating verb */}
@@ -210,12 +201,7 @@ export default function LandingPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="relative font-normal"
-            style={{
-              fontSize: "clamp(16px, 2.71vw, 39px)",
-              letterSpacing: "-0.025em",
-              lineHeight: "1.2",
-            }}
+            className="relative text-[5vw] font-normal leading-[1.25] tracking-[-0.025em] md:text-[2.5vw] lg:text-[2.71vw]"
           >
             I&rsquo;m busy{" "}
             <RotatingVerb />{" "}
