@@ -14,7 +14,7 @@ const inter = Inter({
 const VERBS = [
   "designing",
   "prototyping",
-  "vibe coding",
+  "vibing",
   "iterating",
   "crafting",
   "building",
@@ -142,7 +142,7 @@ export default function LandingPage() {
 
   return (
     <div
-      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-6 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
+      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-3 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
       style={{
         backgroundColor: bg,
         color: fg,
@@ -180,7 +180,7 @@ export default function LandingPage() {
 
       {/* Hero — heading + subtitle grouped together */}
       <div className="flex flex-1 flex-col justify-center">
-        <div className="flex flex-col gap-5 md:gap-8 lg:gap-16">
+        <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,16 +196,16 @@ export default function LandingPage() {
             </span>
           </motion.h1>
 
-          {/* Subtitle with rotating verb */}
+          {/* Subtitle with rotating verb — fixed height so line wrapping doesn't shift heading */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="relative text-[5vw] font-normal leading-[1.25] tracking-[-0.025em] md:text-[2.5vw] lg:text-[2.71vw]"
+            className="relative mt-5 h-[3em] text-[5vw] font-normal leading-[1.25] tracking-[-0.025em] md:mt-8 md:h-[2em] md:text-[2.5vw] lg:mt-16 lg:text-[2.71vw]"
           >
             I&rsquo;m busy{" "}
             <RotatingVerb />{" "}
-            something new with AI, so please come back soon
+            something new with AI, so come back soon
           </motion.p>
         </div>
       </div>

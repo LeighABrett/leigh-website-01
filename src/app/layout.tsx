@@ -13,6 +13,36 @@ export const metadata: Metadata = {
   title: "Leigh Brett — I design products, build teams, and define strategy",
   description:
     "Creative Director & Product Designer for companies that want to move fast.",
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Leigh Brett — I design products, build teams, and define strategy",
+    description:
+      "Creative Director & Product Designer for companies that want to move fast.",
+    url: "https://leighbrett.com",
+    siteName: "Leigh Brett",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Leigh Brett",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leigh Brett — I design products, build teams, and define strategy",
+    description:
+      "Creative Director & Product Designer for companies that want to move fast.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
