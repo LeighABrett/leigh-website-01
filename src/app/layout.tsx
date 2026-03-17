@@ -10,9 +10,9 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Leigh Brett — Design Executive",
+  title: "Leigh Brett — I design products, build teams, and define strategy",
   description:
-    "Design executive with deep experience leading product design, UX and design systems for large-scale digital platforms.",
+    "Creative Director & Product Designer for companies that want to move fast.",
 };
 
 export default function RootLayout({

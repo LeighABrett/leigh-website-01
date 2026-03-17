@@ -1,0 +1,8 @@
+[   16546ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://corporate.walmart.com/px/PXcfrcFEfA/init.js:0
+[   16546ms] [ERROR] Refused to execute script from 'https://corporate.walmart.com/px/PXcfrcFEfA/init.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ https://corporate.walmart.com/news/2025/08/26/walmart-unveils-new-seller-capabilities-and-tools-growth-initiatives-and-next-level-omnichannel-opportunities-at-marketplace-seller-summit:0
+[   17650ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://corporate.walmart.com/home/users/z/zLtHHc66VFkbOpcQXn7J.infinity.json:0
+[   17681ms] [WARNING] No dictionary found for the locale: en_us. Fetching from server... @ https://corporate.walmart.com/etc.clientlibs/adp/clientlibs/clientlib-site.lc-e8acbc0d489669c607e88ada182c6726-lc.min.js:5359
+[   17681ms] [WARNING] No dictionary found for the locale: en_us. Fetching from server... @ https://corporate.walmart.com/etc.clientlibs/adp/clientlibs/clientlib-site.lc-e8acbc0d489669c607e88ada182c6726-lc.min.js:5359
+[   17744ms] [WARNING] No dictionary found for the locale: en_us. Fetching from server... @ https://corporate.walmart.com/etc.clientlibs/adp/clientlibs/clientlib-site.lc-e8acbc0d489669c607e88ada182c6726-lc.min.js:5359
+[   17944ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://corporate.walmart.com/home/users/z/zLtHHc66VFkbOpcQXn7J.infinity.json:0
+[   18490ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://corporate.walmart.com/content/api/adp/workvivoprofile.json?email=null:0

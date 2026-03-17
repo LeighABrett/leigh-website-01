@@ -1,0 +1,10 @@
+[     560ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[    1196ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[   11061ms] TypeError: Cannot read properties of undefined (reading 'scrollIntoView')
+    at https://wearecollins.com/_nuxt/DjMwzwXw.js:2:1393
+[  413226ms] TypeError: Cannot read properties of undefined (reading 'scrollIntoView')
+    at https://wearecollins.com/_nuxt/DjMwzwXw.js:2:1393
+[ 1094335ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[ 1094769ms] The play() request was interrupted by a new load request. https://goo.gl/LdLk22
+[ 1097944ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[ 1098609ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145

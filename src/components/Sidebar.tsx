@@ -19,7 +19,7 @@ export function Sidebar() {
           <div className="border-t-[0.5px] border-border" />
           <a
             href="mailto:leigh.brett@icloud.com"
-            className="flex items-center justify-between py-3 text-xs font-semibold text-foreground transition-colors hover:text-muted"
+            className="flex items-center justify-between py-4 text-xs font-semibold text-foreground transition-colors hover:text-muted"
           >
             Get in touch
             <span className="text-muted transition-colors group-hover:text-foreground">↗</span>
@@ -29,7 +29,7 @@ export function Sidebar() {
             href="https://www.linkedin.com/in/leighbrett"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between py-3 text-xs text-foreground transition-colors hover:text-muted"
+            className="flex items-center justify-between py-4 text-xs text-foreground transition-colors hover:text-muted"
           >
             LinkedIn
             <span className="text-muted transition-colors group-hover:text-foreground">↗</span>

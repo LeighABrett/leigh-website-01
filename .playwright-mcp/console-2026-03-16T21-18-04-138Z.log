@@ -1,0 +1,4 @@
+[     925ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[    1565ms] [WARNING] Media Chrome: No style sheet found on style tag of JSHandle@node @ https://wearecollins.com/_nuxt/B5XVSSfK.js:145
+[  412834ms] TypeError: Cannot read properties of undefined (reading 'scrollIntoView')
+    at https://wearecollins.com/_nuxt/DjMwzwXw.js:2:1393

@@ -47,12 +47,20 @@ export function Header() {
             Back
           </Link>
         ) : (
-          <Link
-            href="/about"
-            className="text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-muted"
-          >
-            About
-          </Link>
+          <>
+            <Link
+              href="/work"
+              className="text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-muted"
+            >
+              Work
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-muted"
+            >
+              About
+            </Link>
+          </>
         )}
         <ThemeToggle />
       </div>
