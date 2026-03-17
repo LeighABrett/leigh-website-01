@@ -142,7 +142,7 @@ export default function LandingPage() {
 
   return (
     <div
-      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-3 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
+      className={`${inter.className} relative flex min-h-dvh flex-col antialiased transition-colors duration-500 px-5 py-6 md:px-10 md:py-12 lg:px-[120px] lg:py-[85px]`}
       style={{
         backgroundColor: bg,
         color: fg,
