@@ -213,8 +213,9 @@ export default function LandingPage() {
               letterSpacing: "-0.06em",
             }}
           >
-            Hi, I&rsquo;m Leigh. I design products, build teams, and define
-            strategy for companies that want to move fast.
+            Hi, I&rsquo;m Leigh. I lead design teams who turn complexity
+            into clarity, build products that people love, and deliver
+            measurable outcomes.
           </motion.h1>
 
           {/* Subtitle with rotating verb */}

@@ -10,17 +10,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Leigh Brett — I design products, build teams, and define strategy",
+  title: "Leigh Brett — Turning complexity into clarity",
   description:
-    "Creative Director & Product Designer for companies that want to move fast.",
+    "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
   icons: {
     icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Leigh Brett — I design products, build teams, and define strategy",
+    title: "Leigh Brett — Turning complexity into clarity",
     description:
-      "Creative Director & Product Designer for companies that want to move fast.",
+      "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
     url: "https://leighbrett.com",
     siteName: "Leigh Brett",
     images: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leigh Brett — I design products, build teams, and define strategy",
+    title: "Leigh Brett — Turning complexity into clarity",
     description:
-      "Creative Director & Product Designer for companies that want to move fast.",
+      "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
     images: ["/og-image.png"],
   },
 };

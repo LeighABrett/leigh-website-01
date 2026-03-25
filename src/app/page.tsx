@@ -174,7 +174,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-hero"
           >
-            Hi, I&rsquo;m Leigh. I design products, build teams, and define strategy for companies that want to move fast.
+            Hi, I&rsquo;m Leigh. I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.
           </motion.h1>
 
           {/* Subtitle with rotating verb */}
