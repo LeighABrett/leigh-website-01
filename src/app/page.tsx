@@ -112,10 +112,11 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="text-content-heading">
-            <span className="text-semi">Products get complicated.</span><br />
-            <span className="text-semi">I make them simple.</span><br />
-            Design leader for platforms, services, and teams.
+          <p className="text-content text-semi mb-[var(--space-xs)]">
+            Products get complicated. I make them simple.
+          </p>
+          <p className="text-content-heading whitespace-nowrap max-md:whitespace-normal max-md:leading-[1.2]">
+            Design leader for platforms, services, and teams at scale.
           </p>
 
           <hr className="divider" />
