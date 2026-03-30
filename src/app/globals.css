@@ -56,7 +56,7 @@
 
   /* Page padding (responsive via class, not inline breakpoints) */
   --page-px: 2.25rem;         /* 36px — mobile */
-  --page-py: 2rem;            /* 32px — mobile */
+  --page-py: 3rem;            /* 48px — mobile */
 
   /* Section gap (between major sections) */
   --section-gap: var(--space-xl);
