@@ -113,7 +113,9 @@ export default function LandingPage() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <p className="text-content-heading">
-            <span className="text-semi">Products get complicated. I make them simple.</span> Design leadership for platforms, services, and teams at scale.
+            <span className="text-semi">Products get complicated.</span><br />
+            <span className="text-semi">I make them simple.</span><br />
+            Design leadership for platforms, services, and teams at scale.
           </p>
 
           <hr className="divider" />

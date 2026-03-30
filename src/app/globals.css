@@ -22,8 +22,8 @@
      Format: clamp(min, preferred, max)
      Letter-spacing uses em so it always scales proportionally with font-size. */
 
-  /* Content heading: 24px → 2vw → 28px */
-  --font-size-content-heading: clamp(1.5rem, 2vw, 1.75rem);
+  /* Content heading: 32px → 3.2vw → 44px */
+  --font-size-content-heading: clamp(2rem, 3.2vw, 2.75rem);
   --line-height-content-heading: 1.4;
   --letter-spacing-content-heading: -0.015em;
 
