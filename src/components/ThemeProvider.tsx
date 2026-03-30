@@ -16,14 +16,22 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
+function getTimeBasedTheme(): Theme {
+  const hour = new Date().getHours();
+  return hour >= 7 && hour < 19 ? "light" : "dark";
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored === "light") {
-      setTheme("light");
+    const resolved = stored || getTimeBasedTheme();
+    setTheme(resolved);
+    if (resolved === "light") {
       document.documentElement.classList.add("light");
+    } else {
+      document.documentElement.classList.remove("light");
     }
   }, []);
 

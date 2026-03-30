@@ -10,17 +10,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Leigh Brett — Turning complexity into clarity",
+  title: "Leigh Brett — Design leadership",
   description:
-    "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
+    "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
   icons: {
     icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Leigh Brett — Turning complexity into clarity",
+    title: "Leigh Brett — Design leadership",
     description:
-      "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
+      "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
     url: "https://leighbrett.com",
     siteName: "Leigh Brett",
     images: [
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Leigh Brett",
+        alt: "Leigh Brett — Design leadership",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leigh Brett — Turning complexity into clarity",
+    title: "Leigh Brett — Design leadership",
     description:
-      "I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.",
+      "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
     images: ["/og-image.png"],
   },
 };
@@ -56,6 +56,10 @@ export default function RootLayout({
               (function() {
                 try {
                   var theme = localStorage.getItem('theme');
+                  if (!theme) {
+                    var hour = new Date().getHours();
+                    theme = (hour >= 7 && hour < 19) ? 'light' : 'dark';
+                  }
                   if (theme === 'light') {
                     document.documentElement.classList.add('light');
                   }

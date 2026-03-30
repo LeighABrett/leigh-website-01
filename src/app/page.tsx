@@ -1,76 +1,33 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Inter } from "next/font/google";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useTheme } from "@/components/ThemeProvider";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
-const VERBS = [
-  "designing",
-  "prototyping",
-  "vibing",
-  "iterating",
-  "crafting",
-  "building",
-  "refining",
-  "shipping",
-];
-
-function RotatingVerb() {
-  const [index, setIndex] = useState(0);
-  const measureRef = useRef<HTMLSpanElement>(null);
-  const [width, setWidth] = useState<number>(0);
+function LiveClock() {
+  const [time, setTime] = useState("");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % VERBS.length);
-    }, 2400);
+    function updateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleTimeString("en-GB", {
+        hour: "2-digit",
+        minute: "2-digit",
+        timeZone: "Europe/London",
+      });
+      setTime(formatted);
+    }
+    updateTime();
+    const interval = setInterval(updateTime, 10000);
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (measureRef.current) {
-      setWidth(measureRef.current.offsetWidth);
-    }
-  }, [index]);
+  if (!time) return null;
 
   return (
-    <>
-      <span
-        ref={measureRef}
-        aria-hidden
-        className="pointer-events-none absolute left-0 top-0 whitespace-nowrap opacity-0"
-        style={{ font: "inherit" }}
-      >
-        {VERBS[index]}
-      </span>
-
-      <motion.span
-        className="relative inline-flex overflow-hidden align-bottom"
-        animate={{ width: width || "auto" }}
-        transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-        style={{ height: "1.15em" }}
-      >
-        <AnimatePresence mode="popLayout">
-          <motion.span
-            key={VERBS[index]}
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: "0%", opacity: 1 }}
-            exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute bottom-0 left-0 whitespace-nowrap text-accent"
-          >
-            {VERBS[index]}
-          </motion.span>
-        </AnimatePresence>
-      </motion.span>
-    </>
+    <span className="text-caption text-muted tabular-nums" style={{ fontVariantNumeric: "tabular-nums" }}>
+      London, UK · {time}
+    </span>
   );
 }
 
@@ -80,7 +37,7 @@ function LandingThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-elevated transition-all hover:brightness-110 active:scale-95 md:h-12 md:w-12 lg:h-[58px] lg:w-[58px]"
+      className="flex h-8 w-8 items-center justify-end text-muted transition-colors hover:text-accent"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       <motion.div
@@ -90,8 +47,8 @@ function LandingThemeToggle() {
       >
         {theme === "dark" ? (
           <svg
-            width="22"
-            height="22"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -111,8 +68,8 @@ function LandingThemeToggle() {
           </svg>
         ) : (
           <svg
-            width="22"
-            height="22"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -129,66 +86,87 @@ function LandingThemeToggle() {
 }
 
 export default function LandingPage() {
-  const { theme } = useTheme();
-  const logoSrc = theme === "dark" ? "/leigh-logo.svg" : "/leigh-logo-dark.svg";
-
   return (
-    <div
-      className={`${inter.className} page-padding relative flex min-h-dvh flex-col bg-background-surface text-foreground antialiased transition-colors duration-500`}
-    >
+    <div className="page-padding relative flex min-h-dvh flex-col bg-background-surface text-foreground antialiased transition-colors duration-500">
       {/* Nav */}
       <motion.nav
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
         className="flex items-center justify-between"
       >
-        <Image
-          src={logoSrc}
-          alt="Leigh"
-          width={152}
-          height={63}
-          className="h-10 w-auto md:h-14 lg:h-[80px]"
-          priority
-        />
+        <span className="text-secondary font-bold tracking-tight">
+          Leigh Brett
+        </span>
 
-        <div className="flex items-center gap-2 md:gap-3">
-          <a
-            href="https://www.linkedin.com/in/leighbrett"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-nav flex h-10 min-w-[100px] items-center justify-center rounded-[60px] bg-accent text-white transition-all hover:brightness-110 active:scale-95 md:h-12 md:min-w-[140px] lg:h-[58px] lg:min-w-[182px]"
-          >
-            LinkedIn
-          </a>
+        <div className="flex items-center gap-1.5">
+          <LiveClock />
           <LandingThemeToggle />
         </div>
       </motion.nav>
 
-      {/* Hero — heading + subtitle grouped together */}
-      <div className="flex flex-1 flex-col justify-center">
-        <div>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-hero"
-          >
-            Hi, I&rsquo;m Leigh. I lead design teams who turn complexity into clarity, build products that people love, and deliver measurable outcomes.
-          </motion.h1>
+      {/* Content */}
+      <div className="flex flex-1 flex-col justify-center" style={{ maxWidth: "var(--content-max-width)" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <p className="text-content-heading">
+            <span className="text-semi">Products get complicated. I make them simple.</span> Design leadership for platforms, services, and teams at scale.
+          </p>
 
-          {/* Subtitle with rotating verb */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-hero-sub relative mt-5 md:mt-8 lg:mt-16"
-          >
-            I&rsquo;m busy{" "}
-            <RotatingVerb />{" "}
-            something new with AI, so come back soon
-          </motion.p>
-        </div>
+          <hr className="divider" />
+
+          <p className="text-content mb-[var(--space-md)]">
+            Currently working independently with enterprise and consumer platforms on <span className="text-semi">raising design quality</span>, <span className="text-semi">experience architecture</span>, and <span className="text-semi">AI integration</span>.
+          </p>
+
+          <p className="text-content mb-[var(--space-md)]">
+            Previously, five years as <span className="text-semi">Senior Director of Design at Walmart</span>. Built the Marketplace design organisation from <span className="text-semi">0 to 60</span>, grew the seller platform from <span className="text-semi">$4B to $10B</span>, and created a pattern library saving <span className="text-semi">$18M a year</span>.
+          </p>
+
+          <p className="text-content mb-[var(--space-md)]">
+            Before that, <span className="text-semi">co-founded a consultancy</span> leading global platform design for Sony Pictures, Ericsson, AT&amp;T, WarnerMedia, and DirecTV.
+          </p>
+
+          <p className="text-content mb-[var(--space-md)]">
+            <span className="text-semi">Over 20+ years</span>, I&apos;ve also worked with Sky, Disney, BBC, Universal Music, Microsoft, Barclays, Johnson &amp; Johnson, and AOL.
+          </p>
+
+          <div className="flex items-center gap-6 pt-[var(--space-sm)]">
+            <a
+              href="https://www.linkedin.com/in/leighbrett"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary underline transition-colors hover:text-accent"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:leigh.brett@icloud.com"
+              className="text-secondary underline transition-colors hover:text-accent"
+            >
+              Contact
+            </a>
+            <a
+              href="https://www.themessymiddle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary underline transition-colors hover:text-accent"
+            >
+              Reading
+            </a>
+            <a
+              href="https://open.spotify.com/artist/6rqXNMsClfcGgr3LggF7xL?si=BzisOJbnSeCzfSGnPn8njQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-secondary underline transition-colors hover:text-accent"
+            >
+              Listening
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
