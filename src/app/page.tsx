@@ -115,7 +115,7 @@ export default function LandingPage() {
           <p className="text-content text-semi mb-[var(--space-xs)]">
             Products get complicated. I make them simple.
           </p>
-          <p className="text-content-heading whitespace-nowrap max-md:whitespace-normal max-md:leading-[1.2]">
+          <p className="text-content-heading lg:whitespace-nowrap max-md:leading-[1.2]">
             Design leader for platforms, services, and teams at scale.
           </p>
 
