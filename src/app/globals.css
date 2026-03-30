@@ -172,6 +172,14 @@ body {
   padding-bottom: var(--page-py);
 }
 
+/* On mobile, ensure breathing room between nav and content when flex-centering
+   pushes content up against the nav */
+@media (max-width: 767px) {
+  nav + div {
+    margin-top: var(--space-lg);
+  }
+}
+
 @media (min-width: 768px) {
   :root {
     --page-px: 2.5rem;      /* 40px — tablet */

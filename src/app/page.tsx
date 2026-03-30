@@ -87,13 +87,13 @@ function LandingThemeToggle() {
 
 export default function LandingPage() {
   return (
-    <div className="page-padding relative min-h-dvh bg-background-surface text-foreground antialiased transition-colors duration-500">
+    <div className="page-padding relative flex min-h-dvh flex-col bg-background-surface text-foreground antialiased transition-colors duration-500">
       {/* Nav */}
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="flex items-center justify-between mb-[var(--space-lg)]"
+        className="flex items-center justify-between"
       >
         <span className="text-secondary font-bold tracking-tight">
           Leigh Brett
@@ -106,7 +106,7 @@ export default function LandingPage() {
       </motion.nav>
 
       {/* Content */}
-      <div style={{ maxWidth: "var(--content-max-width)" }}>
+      <div className="flex flex-1 flex-col justify-center" style={{ maxWidth: "var(--content-max-width)" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
