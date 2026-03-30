@@ -12,7 +12,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 export const metadata: Metadata = {
   title: "Leigh Brett — Design leadership",
   description:
-    "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
+    "Products get complicated. I make them simple. Design leader for platforms, services, and teams.",
   icons: {
     icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Leigh Brett — Design leadership",
     description:
-      "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
+      "Products get complicated. I make them simple. Design leader for platforms, services, and teams.",
     url: "https://leighbrett.com",
     siteName: "Leigh Brett",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leigh Brett — Design leadership",
     description:
-      "Products get complicated. I make them simple. Design leadership for platforms, services, and teams at scale.",
+      "Products get complicated. I make them simple. Design leader for platforms, services, and teams.",
     images: ["/og-image.png"],
   },
 };

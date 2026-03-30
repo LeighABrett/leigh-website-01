@@ -115,7 +115,7 @@ export default function LandingPage() {
           <p className="text-content-heading">
             <span className="text-semi">Products get complicated.</span><br />
             <span className="text-semi">I make them simple.</span><br />
-            Design leadership for platforms, services, and teams at scale.
+            Design leader for platforms, services, and teams.
           </p>
 
           <hr className="divider" />
