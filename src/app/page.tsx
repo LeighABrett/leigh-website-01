@@ -93,7 +93,7 @@ export default function LandingPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="flex items-center justify-between mb-[var(--space-2xl)]"
+        className="flex items-center justify-between mb-[var(--space-lg)]"
       >
         <span className="text-secondary font-bold tracking-tight">
           Leigh Brett
@@ -134,7 +134,7 @@ export default function LandingPage() {
             <span className="text-semi">Over 20+ years</span>, I&apos;ve also worked with Sky, Disney, BBC, Universal Music, Microsoft, Barclays, Johnson &amp; Johnson, and AOL.
           </p>
 
-          <div className="flex items-center gap-6 pt-[var(--space-sm)]">
+          <div className="flex items-center gap-6 pt-[var(--space-lg)]">
             <a
               href="https://www.linkedin.com/in/leighbrett"
               target="_blank"
