@@ -24,7 +24,7 @@
 
   /* Content heading: 32px → 3.2vw → 44px */
   --font-size-content-heading: clamp(2rem, 3.2vw, 2.75rem);
-  --line-height-content-heading: 1.4;
+  --line-height-content-heading: 1.2;
   --letter-spacing-content-heading: -0.015em;
 
   /* Content text: 20px → 1.6vw → 24px */
