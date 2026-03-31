@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Products get complicated. I make them simple. Design leader for platforms, services, and teams at scale.",
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.svg?v=2",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
