@@ -22,8 +22,8 @@
      Format: clamp(min, preferred, max)
      Letter-spacing uses em so it always scales proportionally with font-size. */
 
-  /* Content heading: 32px → 3.2vw → 44px */
-  --font-size-content-heading: clamp(2rem, 3.2vw, 2.75rem);
+  /* Content heading: 36px → 3.6vw → 50px */
+  --font-size-content-heading: clamp(2.25rem, 3.6vw, 3.125rem);
   --line-height-content-heading: 1.2;
   --letter-spacing-content-heading: -0.015em;
 
@@ -55,7 +55,7 @@
   --space-2xl: 6rem;      /* 96px */
 
   /* Page padding (responsive via class, not inline breakpoints) */
-  --page-px: 2.25rem;         /* 36px — mobile */
+  --page-px: 1.125rem;        /* 18px — mobile */
   --page-py: 1.5rem;           /* 24px — mobile */
 
   /* Section gap (between major sections) */
@@ -176,7 +176,7 @@ body {
    pushes content up against the nav */
 @media (max-width: 767px) {
   nav + div {
-    margin-top: var(--space-md);
+    margin-top: var(--space-lg);
   }
 }
 
