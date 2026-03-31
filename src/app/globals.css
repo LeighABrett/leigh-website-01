@@ -56,7 +56,7 @@
 
   /* Page padding (responsive via class, not inline breakpoints) */
   --page-px: 2.25rem;         /* 36px — mobile */
-  --page-py: 3rem;            /* 48px — mobile */
+  --page-py: 1.5rem;           /* 24px — mobile */
 
   /* Section gap (between major sections) */
   --section-gap: var(--space-xl);
@@ -176,21 +176,21 @@ body {
    pushes content up against the nav */
 @media (max-width: 767px) {
   nav + div {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
   }
 }
 
 @media (min-width: 768px) {
   :root {
     --page-px: 2.5rem;      /* 40px — tablet */
-    --page-py: 2.5rem;       /* 40px — tablet */
+    --page-py: 1.25rem;      /* 20px — tablet */
   }
 }
 
 @media (min-width: 1024px) {
   :root {
     --page-px: 3rem;         /* 48px — desktop */
-    --page-py: 3rem;         /* 48px — desktop */
+    --page-py: 1.5rem;      /* 24px — desktop */
   }
 }
 

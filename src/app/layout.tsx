@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk } from "next/font/google";
+import { Schibsted_Grotesk, Cormorant_Garamond } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
@@ -7,6 +7,13 @@ const schibstedGrotesk = Schibsted_Grotesk({
   variable: "--font-schibsted",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["italic"],
 });
 
 export const metadata: Metadata = {
@@ -57,7 +64,7 @@ export default function RootLayout({
                 try {
                   var theme = localStorage.getItem('theme');
                   if (!theme) {
-                    var hour = new Date().getHours();
+                    var hour = parseInt(new Date().toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: 'Europe/London' }));
                     theme = (hour >= 7 && hour < 19) ? 'light' : 'dark';
                   }
                   if (theme === 'light') {
@@ -69,7 +76,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${schibstedGrotesk.variable} ${schibstedGrotesk.className} antialiased`}>
+      <body className={`${schibstedGrotesk.variable} ${cormorantGaramond.variable} ${schibstedGrotesk.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

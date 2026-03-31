@@ -112,7 +112,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="text-content text-semi mb-[var(--space-xs)]">
+          <p className="text-secondary tracking-tight mb-[var(--space-xs)]">
             Products get complicated. I make them simple.
           </p>
           <p className="text-content-heading lg:whitespace-nowrap max-md:leading-[1.2]">
@@ -122,19 +122,19 @@ export default function LandingPage() {
           <hr className="divider" />
 
           <p className="text-content mb-[var(--space-md)]">
-            Currently working independently with enterprise and consumer platforms on <span className="text-semi">raising design quality</span>, <span className="text-semi">experience architecture</span>, and <span className="text-semi">AI integration</span>.
+            Currently working independently with enterprise and consumer platforms on raising design quality, experience architecture, and AI integration.
           </p>
 
           <p className="text-content mb-[var(--space-md)]">
-            Previously, five years as <span className="text-semi">Senior Director of Design at Walmart</span>. Built the Marketplace design organisation from <span className="text-semi">0 to 60</span>, grew the seller platform from <span className="text-semi">$4B to $10B</span>, and created a pattern library saving <span className="text-semi">$18M a year</span>.
+            Previously, five years as Senior Director of Design at Walmart. Built the Marketplace design organisation from 0 to 60, grew the seller platform from $4B to $10B, and created a pattern library saving $18M a year.
           </p>
 
           <p className="text-content mb-[var(--space-md)]">
-            Before that, <span className="text-semi">co-founded a consultancy</span> leading global platform design for Sony Pictures, Ericsson, AT&amp;T, WarnerMedia, and DirecTV.
+            Before that, co-founded a consultancy leading global platform design for Sony Pictures, Ericsson, AT&amp;T, WarnerMedia, and DirecTV.
           </p>
 
           <p className="text-content mb-[var(--space-md)]">
-            <span className="text-semi">Over 20+ years</span>, I&apos;ve also worked with Sky, Disney, BBC, Universal Music, Microsoft, Barclays, Johnson &amp; Johnson, and AOL.
+            Over 20+ years, I&apos;ve also worked with Sky, Disney, BBC, Universal Music, Microsoft, Barclays, Johnson &amp; Johnson, and AOL, and many more.
           </p>
 
           <div className="flex items-center gap-6 pt-[var(--space-lg)]">

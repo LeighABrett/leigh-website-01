@@ -17,8 +17,10 @@ export function useTheme() {
 }
 
 function getTimeBasedTheme(): Theme {
-  const hour = new Date().getHours();
-  return hour >= 7 && hour < 19 ? "light" : "dark";
+  const ukHour = parseInt(
+    new Date().toLocaleString("en-GB", { hour: "2-digit", hour12: false, timeZone: "Europe/London" })
+  );
+  return ukHour >= 7 && ukHour < 19 ? "light" : "dark";
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
