@@ -126,7 +126,7 @@ export default function LandingPage() {
           </p>
 
           <p className="text-content mb-[var(--space-md)]">
-            Previously, Senior Director of Design at Walmart. Built the Marketplace design organisation from 0 to 60. Scaled the seller platform from $4B to $10B. Created an enterprise design system saving $18M annually.
+            Recently, Senior Director of Design at Walmart. Built the global Marketplace design org from 0 to 60. Scaled GMV from $4B to $10B. Created an enterprise design system saving $18M annually.
           </p>
 
           <p className="text-content mb-[var(--space-md)]">
