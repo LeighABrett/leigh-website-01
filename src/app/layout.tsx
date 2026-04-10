@@ -17,9 +17,10 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://leighbrett.com"),
   title: "Leigh Brett — Design leadership",
   description:
-    "Products get complicated. I make them simple. Design leader for platforms, services, and teams at scale.",
+    "Strategic design leader who sweats the detail. I help organisations raise the bar of their digital products and services by building high-performing design teams and scalable systems that deliver measurable value.",
   icons: {
     icon: "/icon.svg?v=2",
     apple: "/apple-touch-icon.png",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Leigh Brett — Design leadership",
     description:
-      "Products get complicated. I make them simple. Design leader for platforms, services, and teams at scale.",
+      "Strategic design leader who sweats the detail. I help organisations raise the bar of their digital products and services by building high-performing design teams and scalable systems that deliver measurable value.",
     url: "https://leighbrett.com",
     siteName: "Leigh Brett",
     images: [
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leigh Brett — Design leadership",
     description:
-      "Products get complicated. I make them simple. Design leader for platforms, services, and teams at scale.",
+      "Strategic design leader who sweats the detail. I help organisations raise the bar of their digital products and services by building high-performing design teams and scalable systems that deliver measurable value.",
     images: ["/og-image.png"],
   },
 };

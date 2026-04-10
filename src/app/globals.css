@@ -22,8 +22,8 @@
      Format: clamp(min, preferred, max)
      Letter-spacing uses em so it always scales proportionally with font-size. */
 
-  /* Content heading: 36px → 3.6vw → 50px */
-  --font-size-content-heading: clamp(2.25rem, 3.6vw, 3.125rem);
+  /* Content heading: 30px → 3.6vw → 50px */
+  --font-size-content-heading: clamp(1.875rem, 3.6vw, 3.125rem);
   --line-height-content-heading: 1.2;
   --letter-spacing-content-heading: -0.015em;
 
@@ -50,6 +50,7 @@
   --space-xs: 0.5rem;    /* 8px */
   --space-sm: 1rem;       /* 16px */
   --space-md: 1.5rem;     /* 24px */
+  --space-md-lg: 2rem;    /* 32px */
   --space-lg: 2.5rem;     /* 40px */
   --space-xl: 4rem;       /* 64px */
   --space-2xl: 6rem;      /* 96px */
@@ -156,8 +157,8 @@ body {
   border: none;
   border-top: 1px solid color-mix(in srgb, var(--highlight) 50%, transparent);
   width: var(--divider-width);
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
+  margin-top: var(--space-md-lg);
+  margin-bottom: var(--space-md-lg);
 }
 
 /* ==========================================================================
