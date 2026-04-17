@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const schibstedGrotesk = Schibsted_Grotesk({
-  variable: "--font-schibsted",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -77,7 +76,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${schibstedGrotesk.variable} ${cormorantGaramond.variable} ${schibstedGrotesk.className} antialiased`}>
+      <body className={`${inter.variable} ${cormorantGaramond.variable} ${inter.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

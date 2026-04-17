@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# research and local reference files
+.firecrawl/
+references/
+CV-Leigh Brett.pdf
+
+# local experiments — not ready for version control
+src/app/test-animation/
+src/components/MessyMiddle.tsx

@@ -87,7 +87,7 @@
   --color-accent: var(--accent);
   --color-highlight: var(--highlight);
   --color-surface-elevated: var(--surface-elevated);
-  --font-sans: var(--font-schibsted);
+  --font-sans: var(--font-inter);
 }
 
 /* ==========================================================================
